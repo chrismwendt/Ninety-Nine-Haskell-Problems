@@ -5,3 +5,5 @@ elementAt l n
     | null l = error "elementAt index after end of list"
     | n == 1 = head l
     | otherwise = elementAt (tail l) (n - 1)
+
+elementAt' l n = l !! (n - 1)
