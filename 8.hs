@@ -10,3 +10,6 @@ compress' l = foldr compressor [] l
     where compressor a b
             | null b || head b /= a = a : b
             | otherwise = b
+
+compress'' [] = []
+compress'' (x:xs) = x : compress (dropWhile (== x) xs)
