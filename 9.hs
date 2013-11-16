@@ -2,5 +2,4 @@
 
 pack [] = []
 pack (x:xs) = [left] : pack right
-    where left = takeWhile (== x) (x:xs)
-          right = dropWhile (== x) (x:xs)
+    where (left,right) = span (== x) (x:xs)
