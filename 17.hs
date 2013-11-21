@@ -7,3 +7,5 @@ split xss@(x:xs) n
     | n == 0 = ([], xss)
     | otherwise = (x : left, right)
     where (left, right) = split xs (n - 1)
+
+split' = flip splitAt
